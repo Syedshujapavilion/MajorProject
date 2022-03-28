@@ -33,28 +33,35 @@
 <section class="text-gray-400 bg-gray-900 body-font relative">
 <div class="container px-5 py-24 mx-auto">
 <div class="flex flex-col text-center w-full mb-6">
-<h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-white">Submit Blog Post</h1>
-<p class="lg:w-2/3 mx-auto leading-relaxed text-base">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify.</p>
+<h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-white">Compile your code here.</h1>
 </div>
-<form method="POST">
-    <div class="lg:w-1/2 md:w-2/3 mx-auto">
-    <div class="flex flex-wrap -m-2">
-    <div class="p-2 w-full">
-    <div class="relative">
-    <label for="title" class="leading-7 text-sm text-gray-400">Title</label>
-    <input type="text" class="w-full bg-gray-800 bg-opacity-40 rounded border border-gray-700 focus:border-indigo-500 focus:bg-gray-900 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
-    </div>
-    </div>
-    <div class="p-2 w-full">
-    <div class="relative">
-    <label for="content" class="leading-7 text-sm text-gray-400">Content</label>
-    <textarea id="content" name="content" class="w-full bg-gray-800 bg-opacity-40 rounded border border-gray-700 focus:border-indigo-500 focus:bg-gray-900 focus:ring-2 focus:ring-indigo-900 h-32 text-base outline-none text-gray-100 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
-    </div>
-    </div>
-    <div class="p-2 w-full">
-    <button class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg" type="submit">Submit</button>
-    </div>
+<div class="flex p-2 w-1/2">
+<form action="compile" method="post" id="form">
+<label for="language">Select Language</label>
+<select name="language" id="language">
+    <option value="py">Python</option>
+    <option value="c">C</option>
+    <option value="cpp">C++</option>
+    <option value="java">Java</option>
+    </select>
+<div class="p-2 w-full">
+<div class="relative">
+<div class="container px-[200px]">
+<label for="content" class="leading-7 text-sm text-gray-400">Compile</label>
+<textarea id="content" name="codeBeta" class="w-[500px] bg-gray-800 bg-opacity-40 rounded border border-gray-700 focus:border-indigo-500 focus:bg-gray-900 focus:ring-2 focus:ring-indigo-900 h-32 text-base outline-none text-gray-100 py-1 resize-none leading-6 transition-colors duration-200 ease-in-out h-[500px]"></textarea>
+<label for="email" class="leading-7 text-sm text-gray-400">Inputs</label>
+<input type="text" name="input" class="w-full bg-gray-800 bg-opacity-40 rounded border border-gray-700 focus:border-blue-500 focus:bg-gray-900 focus:ring-2 focus:ring-blue-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out my-2">
+</div>
+</div>
+</div>
+<div class="p-2 w-full">
+<button class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg" type="submit">Submit</button>
+</div>
 </form>
+<div class="text-3xl font-bold py-10 w-[500px]">Output: <br/>
+<p class="text-xl my-10 w-[400px]">#{output.output}</p>
+</div>
+</div>
 <div class="p-2 w-full pt-8 mt-8 border-t border-gray-800 text-center">
 <a class="text-indigo-400">example@email.com</a>
 <p class="leading-normal my-5">49 Smith St.
@@ -88,7 +95,6 @@
 </div>
 </div>
 </section>
-
 <script src="https://cdn.tailwindcss.com"></script>
 </body>
 </html>
